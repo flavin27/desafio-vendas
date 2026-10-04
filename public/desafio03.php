@@ -1,5 +1,7 @@
 <?php
 
+$taxa_multa = 0.025;
+
 $dia_atual = new DateTime();
 
 echo "Insira o valor da fatura: ";
@@ -24,7 +26,7 @@ $atraso = $dia_atual->diff($data_vencimento)->days;
 
 echo "A fatura está atrasada em: $atraso dias\n";
 
-$valor_multa = $valor_fatura * 0.025 * $atraso;
+$valor_multa = $valor_fatura * $taxa_multa * $atraso;
 
 echo "Valor da multa: R$ " . number_format($valor_multa, 2, ',', '.') . "\n";
 
