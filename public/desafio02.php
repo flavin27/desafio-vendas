@@ -1,8 +1,8 @@
 <?php
 
-$file = fopen("estoque.json", "r") or die("Arquivo json de estoque não encontrado!");
+$file = fopen(__DIR__ . "/../data/estoque.json", "r") or die("Arquivo json de estoque não encontrado!");
 
-$estoque = json_decode(fread($file, filesize("estoque.json")), true)['estoque'];
+$estoque = json_decode(fread($file, filesize(__DIR__ . "/../data/estoque.json")), true)['estoque'];
 
 fclose($file);
 

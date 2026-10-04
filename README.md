@@ -39,19 +39,35 @@ Verifique a instalação:
 php --version
 ```
 
+## Estrutura do Projeto
+
+```
+desafio-vendas/
+├── data/              # Arquivos de dados (JSON)
+│   ├── estoque.json
+│   └── vendas.json
+├── public/            # Scripts executáveis
+│   ├── desafio01.php
+│   ├── desafio02.php
+│   └── desafio03.php
+├── src/               # Código fonte (classes, funções - futuro)
+├── LICENSE
+└── README.md
+```
+
 ## Como Rodar
 
 Execute cada desafio via linha de comando:
 
 ```bash
 # Desafio 1 - Cálculo de comissão
-php desafio01.php
+php public/desafio01.php
 
 # Desafio 2 - Controle de estoque
-php desafio02.php
+php public/desafio02.php
 
 # Desafio 3 - Cálculo de multa
-php desafio03.php
+php public/desafio03.php
 ```
 
 ## Licença

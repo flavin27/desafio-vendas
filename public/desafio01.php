@@ -1,8 +1,8 @@
 <?php
 
-$file = fopen("vendas.json", "r") or die("Arquivo json de vendas não encontrado!");
+$file = fopen(__DIR__ . "/../data/vendas.json", "r") or die("Arquivo json de vendas não encontrado!");
 
-$vendas = json_decode(fread($file, filesize("vendas.json")), true)['vendas'];
+$vendas = json_decode(fread($file, filesize(__DIR__ . "/../data/vendas.json")), true)['vendas'];
 
 $vendedores = [];
 
